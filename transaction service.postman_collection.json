@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "b9b07042-910b-4cb9-94ee-34bf911956b4",
+		"name": "transaction service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11744134",
+		"_collection_link": "https://ismaya-dev.postman.co/workspace/Tes-Kerja~f04d5050-3e18-4716-a170-517d33294577/collection/11744134-b9b07042-910b-4cb9-94ee-34bf911956b4?action=share&source=collection_link&creator=11744134"
+	},
+	"item": [
+		{
+			"name": "daftar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\":\"tes\",\r\n    \"no_hp\":\"123\",\r\n    \"nik\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/daftar",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"daftar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tabung",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"no_rekening\":\"9957339796\",\r\n    \"nominal\":150000.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/tabung",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"tabung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tarik uang",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"no_rekening\":\"9957339796\",\r\n    \"nominal\":50000.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/tarik",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"tarik"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cek saldo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"no_rekening\":\"9931700051\",\r\n    \"nominal\":100000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/saldo/9957339796",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"saldo",
+						"9957339796"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
